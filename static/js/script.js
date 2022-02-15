@@ -480,7 +480,7 @@ function loop_logic() {
         keyboardInput.focus()
     })
     document.addEventListener('keydown', function (event) {
-        let keyInputName = event.key
+        let keyInputName = event.code
         // if (letters.indexOf(keyInputName.toLowerCase()) >= 0) {
         if (true) {
             if (letterIndex <= 5) {
