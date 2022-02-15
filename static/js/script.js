@@ -479,8 +479,10 @@ function loop_logic() {
     keyboard_button.addEventListener("click", function(event) {
         if (keyboard_ui.hidden) {
             keyboard_ui.hidden = false
+            keyboard_button.innerText = "Hide Keyboard"
         } else {
             keyboard_ui.hidden = true
+            keyboard_button.innerText = "Bring up Keyboard"
         }
     })
 
