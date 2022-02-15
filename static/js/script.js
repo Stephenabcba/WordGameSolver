@@ -749,6 +749,11 @@ function loop_logic() {
             '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>' + "</p>"
     }
 
+    let keyboard_button = document.getElementById("keyboard")
+    let input1 = document.getElementById("input1")
+    keyboard_button.addEventListener("click",function(event) {
+        input1.focus()
+    })
 }
 
 loop_logic()
