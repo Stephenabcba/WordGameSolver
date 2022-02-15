@@ -481,7 +481,8 @@ function loop_logic() {
     })
     document.addEventListener('keydown', function (event) {
         let keyInputName = event.key
-        if (letters.indexOf(keyInputName.toLowerCase()) >= 0) {
+        // if (letters.indexOf(keyInputName.toLowerCase()) >= 0) {
+        if (true) {
             if (letterIndex <= 5) {
                 let box = document.getElementById(`input${letterIndex}`)
                 box.innerHTML = keyInputName.toUpperCase()
