@@ -18,11 +18,10 @@
             <a href="" class="btn btn-red" id="reset">Reset</a>
             <button class="btn btn-blue" id="process">Process!</button>
             <button class="btn btn-purple" id="feedback">Feedback</button>
-            <button class="btn btn-purple" id="keyboard">Bring up Keyboard</button>
+            <button class="btn btn-purple" id="keyboard_button">Bring up Keyboard</button>
         </div>
         <div id="warning"></div>
         <div id="rows">
-            <input type="text" name="" id="keyboardInput">
             <div class="row g-3">
                 <div class="col word_box">
                     <div class="bg-light word" id="box1">
@@ -89,6 +88,42 @@
         <div id="results" hidden></div>
         <div id="more_words" hidden></div>
     </div>
+    <div id="keyboard" hidden>
+        <div class="row key_row">
+            <button class="col bg-keyboard btn" id="keyboard_q" value="Q">Q</button>
+            <button class="col bg-keyboard btn" id="keyboard_w" value="W">W</button>
+            <button class="col bg-keyboard btn" id="keyboard_e" value="E">E</button>
+            <button class="col bg-keyboard btn" id="keyboard_r" value="R">R</button>
+            <button class="col bg-keyboard btn" id="keyboard_t" value="T">T</button>
+            <button class="col bg-keyboard btn" id="keyboard_y" value="Y">Y</button>
+            <button class="col bg-keyboard btn" id="keyboard_u" value="U">U</button>
+            <button class="col bg-keyboard btn" id="keyboard_i" value="I">I</button>
+            <button class="col bg-keyboard btn" id="keyboard_o" value="O">O</button>
+            <button class="col bg-keyboard btn" id="keyboard_p" value="P">P</button>
+        </div>
+        <div class="row key_row">
+            <button class="col bg-keyboard btn" id="keyboard_a" value="A">A</button>
+            <button class="col bg-keyboard btn" id="keyboard_s" value="S">S</button>
+            <button class="col bg-keyboard btn" id="keyboard_d" value="D">D</button>
+            <button class="col bg-keyboard btn" id="keyboard_f" value="F">F</button>
+            <button class="col bg-keyboard btn" id="keyboard_g" value="G">G</button>
+            <button class="col bg-keyboard btn" id="keyboard_h" value="H">H</button>
+            <button class="col bg-keyboard btn" id="keyboard_j" value="J">J</button>
+            <button class="col bg-keyboard btn" id="keyboard_k" value="K">K</button>
+            <button class="col bg-keyboard btn" id="keyboard_l" value="L">L</button>
+        </div>
+        <div class="row key_row">
+            <button class="col bg-keyboard btn" id="keyboard_enter" value="Enter">Enter</button>
+            <button class="col bg-keyboard btn" id="keyboard_z" value="Z">Z</button>
+            <button class="col bg-keyboard btn" id="keyboard_x" value="X">X</button>
+            <button class="col bg-keyboard btn" id="keyboard_c" value="C">C</button>
+            <button class="col bg-keyboard btn" id="keyboard_v" value="V">V</button>
+            <button class="col bg-keyboard btn" id="keyboard_b" value="B">B</button>
+            <button class="col bg-keyboard btn" id="keyboard_n" value="N">N</button>
+            <button class="col bg-keyboard btn" id="keyboard_m" value="M">M</button>
+            <button class="col bg-keyboard btn" id="keyboard_delete" value="Backspace">Delete</button>
+        </div>
+    </div>
     <div id="feedback_form" hidden>
         <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe7R7o3chrcAUzWPIVhSVDDrK2eEK6qKYsze9IU7rQTVwM3wQ/viewform?embedded=true" width="100%" height="90%" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
         <button class="btn btn-purple" id="close_feedback">Close</button>
@@ -98,6 +133,7 @@
         <p>Educational purposes only.</p>
         <p>NYTimes please don't sue me</p>
     </div>
+    <script src="./static/js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>

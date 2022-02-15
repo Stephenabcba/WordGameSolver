@@ -28,11 +28,26 @@ h1 {
     background-color: #c9b458;
 }
 
+.bg-keyboard {
+    background-color: #d3d6da;
+}
+
 .row {
     display: flex;
     flex-wrap: wrap;
     margin-right: calc(-.5 * 1rem);
     margin-left: calc(-.5 * 1rem);
+}
+.key_row {
+    margin-top: 30px;
+    justify-content: space-between;
+    gap:10px;
+}
+.key_row > button {
+    display: inline;
+    border-radius: 10px;
+    border:#787c7e 1px solid;
+    cursor: pointer;
 }
 
 .col {
@@ -161,11 +176,12 @@ h1 {
         padding-bottom: 50%;
     }
     #fixed_bottom {
-        flex-direction: column;
-        text-align: center;
+        /* flex-direction: column;
+        text-align: center; */
+        display: none;
     }
 }
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 500px) {
     .btn {
         overflow:hidden;
         padding:0;
@@ -272,8 +288,9 @@ ul,li {
     right:20px;
 }
 
-#keyboardInput {
-    width: 0;
-    height: 0;
-    border: none;
+#keyboard {
+    position:fixed;
+    bottom: 40px;
+    right:5%;
+    width: 90%;
 }
