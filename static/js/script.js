@@ -466,14 +466,19 @@ function loop_logic() {
     addColorListeners()
     let feedback_button = document.getElementById("feedback")
     let feedback_form = document.getElementById("feedback_form")
-    feedback_button.addEventListener("click",function(event) {
+    feedback_button.addEventListener("click", function (event) {
         feedback_form.hidden = false
     })
     let close_feedback = document.getElementById("close_feedback")
-    close_feedback.addEventListener("click",function(event) {
+    close_feedback.addEventListener("click", function (event) {
         feedback_form.hidden = true
     })
     let results = document.getElementById("results")
+    let keyboard_button = document.getElementById("keyboard")
+    let keyboardInput = document.getElementById("keyboardInput")
+    keyboard_button.addEventListener("click", function (event) {
+        keyboardInput.focus()
+    })
     document.addEventListener('keydown', function (event) {
         let keyInputName = event.key
         if (letters.indexOf(keyInputName.toLowerCase()) >= 0) {
@@ -548,6 +553,80 @@ function loop_logic() {
         }
         // console.log(letterArray)
     })
+    // keyboardInput.addEventListener('keydown', function (event) {
+    //     let keyInputName = event.key
+    //     if (letters.indexOf(keyInputName.toLowerCase()) >= 0) {
+    //         if (letterIndex <= 5) {
+    //             let box = document.getElementById(`input${letterIndex}`)
+    //             box.innerHTML = keyInputName.toUpperCase()
+    //             letterArray.push(keyInputName.toUpperCase())
+    //             letterIndex++
+    //         }
+    //     } else if (keyInputName == "Enter") {
+    //         if (letterIndex == 6) {
+    //             console.log("Valid confirm");
+    //             let confirm_input = confirm("Are you sure?")
+    //             console.log(confirm_input)
+    //             if (confirm_input) {
+    //                 let word = letterArray.join("").toLowerCase()
+    //                 console.log(word)
+    //                 let correct_indexes = []
+    //                 let exist_indexes = []
+    //                 for (let i = 0; i < 5; i++) {
+    //                     if (correct_array[i] > 0) {
+    //                         correct_indexes.push(i)
+    //                     }
+    //                     if (exist_array[i] > 0) {
+    //                         exist_indexes.push(i)
+    //                     }
+    //                 }
+    //                 process(word, correct_indexes, exist_indexes)
+    //                 results.innerHTML = ""
+    //                 solver.printStatus()
+    //                 let possible_words = solver.get_possible_words()
+    //                 if (possible_words) {
+    //                     let printed_count = 0
+    //                     let word_block = "<ul>"
+    //                     for (let word of possible_words) {
+    //                         word_block += "<li>" + word + "</li>"
+    //                         printed_count++
+    //                         if (printed_count % 5 == 0) {
+    //                             word_block += "</ul><ul>"
+    //                         }
+    //                         if (printed_count >= 30) {
+    //                             break
+    //                         }
+    //                     }
+    //                     results.innerHTML += word_block
+    //                     if (printed_count >= 30) {
+    //                         setupViewMore(results, possible_words)
+    //                     }
+    //                 } else {
+    //                     results.innerHTML = "<p>" + "I don't know how you got here but you must make a guess first." + "</p>"
+    //                 }
+    //                 results.hidden = false
+    //                 clear_prevIds()
+    //                 render_new_rows()
+    //                 addColorListeners()
+    //                 letterIndex = 1
+    //                 letterArray = []
+    //                 correct_array = [0, 0, 0, 0, 0]
+    //                 exist_array = [0, 0, 0, 0, 0]
+    //             }
+    //         } else {
+    //             console.log("Warning")
+    //             addError("You don't have 5 letters in your word!")
+    //         }
+    //     } else if (keyInputName == "Backspace") {
+    //         if (letterIndex > 1) {
+    //             letterIndex--
+    //             let box = document.getElementById(`input${letterIndex}`)
+    //             letterArray.pop()
+    //             box.innerHTML = "-"
+    //         }
+    //     }
+    //     // console.log(letterArray)
+    // })
 
     let process_button = document.getElementById("process")
     process_button.addEventListener("click", function (event) {
@@ -748,12 +827,9 @@ function loop_logic() {
         warning.innerHTML = "<p class='alert alert-danger alert-dismissible fade show' role='alert'>" + message +
             '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>' + "</p>"
     }
-
-    let keyboard_button = document.getElementById("keyboard")
-    let keyboardInput = document.getElementById("keyboardInput")
-    keyboard_button.addEventListener("click",function(event) {
-        keyboardInput.focus()
-    })
 }
 
-loop_logic()
+
+window.addEventListener("load", function () {
+    loop_logic()
+});
