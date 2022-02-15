@@ -750,9 +750,9 @@ function loop_logic() {
     }
 
     let keyboard_button = document.getElementById("keyboard")
-    let input1 = document.getElementById("input1")
+    let keyboardInput = document.getElementById("keyboardInput")
     keyboard_button.addEventListener("click",function(event) {
-        input1.focus()
+        keyboardInput.focus()
     })
 }
 
