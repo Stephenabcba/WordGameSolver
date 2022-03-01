@@ -186,6 +186,12 @@ h1 {
         overflow:hidden;
         padding:0;
     }
+    .key_row > button {
+        padding: 8px 0;
+    }
+    .key_row {
+        gap:2px;
+    }
 }
 
 
